@@ -1,0 +1,100 @@
+/* Home.css */
+
+/* Carousel Banner */
+.home-banner {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.home-carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.banner-caption h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .home-banner {
+    height: 250px;
+  }
+
+  .banner-caption h2 {
+    font-size: 1rem;
+  }
+}
+
+/* Intro Section */
+.home-intro {
+  padding: 60px 20px 20px;
+  background-color: #f8f9fa;
+}
+
+/* Services Section */
+.home-services {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.service-card {
+  background: #f1f9ff;
+  padding: 24px 16px;
+  border-radius: 12px;
+  border: 1px solid #dee2e6;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  background: #e9f5ff;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Why Us Section */
+.home-why-us {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.home-why-us ul li {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+/* CTA Section */
+.home-cta {
+  padding: 60px 20px;
+  background-color: #007bff;
+  color: white;
+}
+
+.home-cta h4 {
+  color: white;
+}
+
+.home-cta .btn {
+  font-size: 1rem;
+  border-radius: 8px;
+}

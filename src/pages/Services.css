@@ -1,0 +1,58 @@
+/* src/pages/Services.css */
+
+.services-page {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.services-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #007bff;
+}
+
+.service-block {
+  background: #ffffff;
+  padding: 30px 25px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+}
+
+.service-block h2 {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.service-block h3 {
+  font-size: 1.2rem;
+  color: #007bff;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.service-block p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.service-block ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.service-block ul li {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 6px;
+}
