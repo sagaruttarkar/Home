@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
-import Appointment from './pages/Appointment';
+import Gallary from './pages/Gallary'; // ✅ fixed import
 import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 
@@ -35,7 +35,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/appointment" element={<Appointment />} />
+          <Route path="/gallary" element={<Gallary />} /> {/* ✅ updated route path */}
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
         </Routes>

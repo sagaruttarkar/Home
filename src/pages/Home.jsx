@@ -10,16 +10,16 @@ import 'swiper/css/pagination';
 function Home() {
   const images = [
     {
-      src: `${process.env.PUBLIC_URL}/assets/radiology1.jpg`,
-      caption: 'High-Resolution MRI Scanner'
+      src: `${process.env.PUBLIC_URL}/assets/Banner1.jpg`,
+      caption: 'Advance portable Xray'
     },
     {
-      src: `${process.env.PUBLIC_URL}/assets/radiology2.jpg`,
-      caption: 'Advanced CT Imaging'
+      src: `${process.env.PUBLIC_URL}/assets/Banner2.jpg`,
+      caption: 'HomeBlood test'
     },
     {
-      src: `${process.env.PUBLIC_URL}/assets/radiology3.jpg`,
-      caption: 'Modern Ultrasound Machine'
+      src: `${process.env.PUBLIC_URL}/assets/Banner1.jpg`,
+      caption: 'Portable ECG Machine'
     }
   ];
 
@@ -108,8 +108,8 @@ function Home() {
         <div className="container text-center">
           <h4 className="fw-bold mb-3">Book Your Home X-Ray or ECG Today!</h4>
           <div className="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
-            <a href="tel:+919XXXXXXXXX" className="btn btn-primary px-4 py-2">📞 Call Now</a>
-            <a href="https://wa.me/91XXXXXXXXXX" className="btn btn-success px-4 py-2">📱 WhatsApp Us</a>
+            <a href="tel:+918591261438" className="btn btn-primary px-4 py-2">📞 Call Now</a>
+            <a href="https://wa.me/message/TWKAT7WPLF2UG1" className="btn btn-success px-4 py-2">📱 WhatsApp Us</a>
           </div>
         </div>
       </section>

@@ -1,23 +1,25 @@
-/* Home.css */
+/* src/pages/Home.css */
 
+/* ===================== */
 /* Carousel Banner */
 .home-banner {
   width: 100%;
   height: 400px;
+  position: relative;
   overflow: hidden;
+}
+
+.home-carousel .banner-slide {
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 
-.home-carousel img {
+.home-carousel .banner-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-}
-
-.banner-slide {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  object-fit: cover; /* ensures image fills banner without distortion */
+  display: block;
 }
 
 .banner-caption {
@@ -25,10 +27,11 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  padding: 1rem;
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
-  padding: 1rem;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .banner-caption h2 {
@@ -36,26 +39,46 @@
   margin: 0;
 }
 
+/* Responsive carousel */
+@media (max-width: 1024px) {
+  .home-banner {
+    height: 300px;
+  }
+  .banner-caption h2 {
+    font-size: 1.2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .home-banner {
     height: 250px;
   }
-
   .banner-caption h2 {
     font-size: 1rem;
   }
 }
 
-/* Intro Section */
+/* ===================== */
+/* Welcome Section */
 .home-intro {
-  padding: 60px 20px 20px;
+  padding: 60px 20px;
   background-color: #f8f9fa;
 }
 
+.home-intro h2 {
+  font-size: 2rem;
+}
+
+.home-intro p {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* ===================== */
 /* Services Section */
 .home-services {
   padding: 60px 20px;
-  background: #fff;
+  background-color: #fff;
 }
 
 .service-card {
@@ -64,6 +87,17 @@
   border-radius: 12px;
   border: 1px solid #dee2e6;
   transition: all 0.3s ease;
+  text-align: center;
+}
+
+.service-card h5 {
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #495057;
 }
 
 .service-card:hover {
@@ -72,10 +106,15 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* Why Us Section */
+/* ===================== */
+/* Why Choose Us */
 .home-why-us {
   padding: 60px 20px;
   background-color: #f9f9f9;
+}
+
+.home-why-us h3 {
+  margin-bottom: 30px;
 }
 
 .home-why-us ul li {
@@ -83,18 +122,56 @@
   margin-bottom: 12px;
 }
 
+/* ===================== */
 /* CTA Section */
 .home-cta {
   padding: 60px 20px;
   background-color: #007bff;
   color: white;
+  text-align: center;
 }
 
 .home-cta h4 {
-  color: white;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
 }
 
 .home-cta .btn {
   font-size: 1rem;
   border-radius: 8px;
+  text-decoration: none;
+}
+
+.home-cta .btn-primary {
+  background-color: #0069d9;
+  border: none;
+}
+
+.home-cta .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.home-cta .btn-success {
+  background-color: #28a745;
+  border: none;
+}
+
+.home-cta .btn-success:hover {
+  background-color: #218838;
+}
+
+/* ===================== */
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .home-intro,
+  .home-services,
+  .home-why-us,
+  .home-cta {
+    padding: 40px 15px;
+  }
+
+  .home-cta .d-flex {
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
 }

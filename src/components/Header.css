@@ -1,155 +1,121 @@
-/* src/components/Header.css */
-
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Fixed Header Base */
+/* General header styling */
 .header {
   width: 100%;
-  position: fixed; /* Always fixed */
-  top: 0;
-  left: 0;
-  z-index: 999;
-  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  position: relative;
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
 
-/* Header container */
+.header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 18px 20px;
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: all 0.28s ease;
-  background: rgba(0, 123, 255, 0.96); /* solid blue background from the start */
-  backdrop-filter: blur(4px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-/* Sticky state (on scroll) */
-.header.sticky .header-container {
-  padding: 10px 20px; /* Slightly smaller padding on scroll */
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  flex-wrap: wrap;
 }
 
 /* Logo */
 .logo a {
-  color: #fff;
-  font-size: 1.75rem;
-  font-weight: 700;
   text-decoration: none;
-  letter-spacing: 0.6px;
-  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #007bff;
 }
 
 /* Navigation */
 .nav {
   display: flex;
-  gap: 26px;
   align-items: center;
+  gap: 20px;
 }
 
-/* Nav links */
 .nav a {
-  color: #fff;
   text-decoration: none;
+  color: #333;
   font-weight: 500;
-  transition: color 0.22s ease, transform 0.18s ease;
-  padding: 6px 4px;
   position: relative;
-  letter-spacing: 0.1px;
-}
-
-/* Hover underline */
-.nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0%;
-  height: 2px;
-  background: #ffd700;
-  transition: width 0.22s ease;
-  border-radius: 2px;
-  opacity: 0.95;
+  padding: 5px 0;
+  transition: all 0.3s ease;
 }
 
 .nav a:hover {
-  color: #ffd700;
-  transform: translateY(-1px);
-}
-
-.nav a:hover::after {
-  width: 100%;
-}
-
-/* Active link (optional) */
-.nav a.active {
-  color: #ffd700;
+  color: #007bff;
 }
 
 .nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
   width: 100%;
+  height: 2px;
+  background-color: #007bff;
+  border-radius: 2px;
 }
 
 /* CTA Button */
 .cta-btn {
-  background: #ffd700;
-  color: #007bff;
-  padding: 8px 18px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
   border-radius: 6px;
-  font-weight: 600;
   text-decoration: none;
-  transition: background 0.2s ease, transform 0.15s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .cta-btn:hover {
-  background: #ffc107;
-  color: #0056b3;
-  transform: translateY(-2px);
+  background-color: #0056b3;
+  color: #fff;
 }
 
-/* Hamburger menu button */
+/* Mobile Menu Button */
 .menu-toggle {
   display: none;
   background: none;
   border: none;
   font-size: 1.8rem;
   cursor: pointer;
-  color: #fff;
-  padding: 6px;
+  color: #007bff;
 }
 
-/* Responsive styles */
+/* Mobile Navigation */
 @media (max-width: 992px) {
   .nav {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: #007bff;
     flex-direction: column;
-    width: 220px;
+    width: 100%;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.28s ease;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    transition: max-height 0.3s ease;
+    background: #fff;
+    margin-top: 10px;
+    border-top: 1px solid #eee;
   }
 
   .nav.open {
-    max-height: 640px;
+    max-height: 500px; /* enough to show all links */
   }
 
   .nav a {
-    padding: 12px 16px;
-    display: block;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 12px 0;
+    width: 100%;
+    text-align: center;
   }
 
   .menu-toggle {
@@ -157,26 +123,143 @@
   }
 
   .cta-btn {
+    display: none; /* hide CTA in mobile header if needed */
+  }
+  /* General header styling */
+.header {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  position: relative;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.logo a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #007bff;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  padding: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.nav a:hover {
+  color: #007bff;
+}
+
+.nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+  border-radius: 2px;
+}
+
+/* CTA Button */
+.cta-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #007bff;
+}
+
+/* Mobile Navigation */
+@media (max-width: 992px) {
+  .nav {
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: #fff;
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    gap: 0;
+  }
+
+  .nav.open {
+    max-height: 500px; /* enough to show all links + CTA */
+  }
+
+  .nav a {
+    padding: 12px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Show CTA inside mobile menu */
+  .nav.open .cta-btn {
+    display: block;
+    margin: 10px auto;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Hide header CTA button in mobile view */
+  .header-container > .cta-btn {
     display: none;
   }
 }
 
-/* Small screen tweaks */
-@media (max-width: 420px) {
-  .logo a {
-    font-size: 1.1rem;
-  }
-
-  .nav a {
-    font-size: 0.95rem;
-  }
-
-  .header-container {
-    padding: 12px 14px;
-  }
-}
-
-/* Body padding to prevent content from being hidden under fixed header */
-body {
-  padding-top: 80px; /* adjust based on your header height */
 }

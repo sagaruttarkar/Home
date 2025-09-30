@@ -18,15 +18,7 @@ function Services() {
             Reports are delivered quickly in both digital and printed formats.
           </p>
 
-          <h3>Why Choose Our Home X-Ray Services?</h3>
-          <ul>
-            <li>✅ Comfort & Convenience: No hospital travel or waiting</li>
-            <li>✅ Ideal for Elderly & Bedridden Patients</li>
-            <li>✅ Infection-Free: Avoid crowded clinics</li>
-            <li>✅ Fast Reports: Digital copy in 1–2 hours, print same-day</li>
-            <li>✅ Affordable: Competitive pricing, no hidden fees</li>
-            <li>✅ 24/7 Availability</li>
-          </ul>
+         
         </section>
 
         {/* Home/Portable ECG */}
@@ -62,6 +54,15 @@ function Services() {
             We regularly participate in medical camps organized by hospitals, NGOs, and community health services. Our team provides on-site X-ray and ECG diagnostics to large groups, helping bring healthcare access to remote and underserved areas.
           </p>
         </section>
+           <h3>Why Choose Our Home X-Ray Services?</h3>
+          <ul>
+            <li>✅ Comfort & Convenience: No hospital travel or waiting</li>
+            <li>✅ Ideal for Elderly & Bedridden Patients</li>
+            <li>✅ Infection-Free: Avoid crowded clinics</li>
+            <li>✅ Fast Reports: Digital copy in 1–2 hours, print same-day</li>
+            <li>✅ Affordable: Competitive pricing, no hidden fees</li>
+            <li>✅ 24/7 Availability</li>
+          </ul>
       </div>
     </div>
   );

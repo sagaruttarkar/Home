@@ -3,7 +3,7 @@ import CountUp from "react-countup";
 import "./About.css";
 
 function About() {
-  const bannerImage = `${process.env.PUBLIC_URL}/assets/about-us-banner.jpg`;
+  const bannerImage = `${process.env.PUBLIC_URL}/assets/about-us-banner1.jpg`;
 
   const stats = [
     { title: "Established", value: 2021 },

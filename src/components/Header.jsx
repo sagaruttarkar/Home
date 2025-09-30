@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
@@ -7,20 +7,19 @@ function Header() {
   const [isSticky, setIsSticky] = useState(false);
   const location = useLocation();
 
-  // Toggle menu
+  // Toggle mobile menu
   const toggleMenu = () => setMenuOpen((prev) => !prev);
 
   // Close menu
   const closeMenu = () => setMenuOpen(false);
 
-  // Sticky on scroll
-
- useEffect(() => {
-  const handleScroll = () => setIsSticky(window.scrollY > 50);
-  handleScroll(); // Add this to apply immediately if needed
-  window.addEventListener('scroll', handleScroll);
-  return () => window.removeEventListener('scroll', handleScroll);
-}, []);
+  // Sticky header on scroll
+  useEffect(() => {
+    const handleScroll = () => setIsSticky(window.scrollY > 50);
+    handleScroll(); // Apply immediately
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Auto-close menu on route change
   useEffect(() => {
@@ -37,16 +36,28 @@ function Header() {
 
         {/* Navigation */}
         <nav className={`nav ${menuOpen ? 'open' : ''}`}>
-          <Link to="/">Home</Link>
-          <Link to="/about">About Us</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/appointment">Book Appointment</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="/faq">FAQ</Link>
+          <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>
+            Home
+          </NavLink>
+          <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>
+            About Us
+          </NavLink>
+          <NavLink to="/services" className={({ isActive }) => isActive ? 'active' : ''}>
+            Services
+          </NavLink>
+          <NavLink to="/gallary" className={({ isActive }) => isActive ? 'active' : ''}>
+            Gallary
+          </NavLink>
+          <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>
+            Contact
+          </NavLink>
+          <NavLink to="/faq" className={({ isActive }) => isActive ? 'active' : ''}>
+            FAQ
+          </NavLink>
         </nav>
 
-        {/* CTA */}
-        <Link to="/appointment" className="cta-btn">
+        {/* CTA Button */}
+        <Link to="/contact" className="cta-btn">
           Book Now
         </Link>
 
