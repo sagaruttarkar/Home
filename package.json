@@ -2,7 +2,7 @@
   "name": "vismit-radiology",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sagaruttarkar.github.io/Home/",
+  "homepage": ".",
   "dependencies": {
     "@dataconnect/generated": "file:src/dataconnect-generated",
     "@popperjs/core": "^2.11.8",
@@ -19,11 +19,13 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "serve-build": "serve -s build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^5.0.0",
+    "serve": "^14.2.0"
   },
   "browserslist": {
     "production": [
