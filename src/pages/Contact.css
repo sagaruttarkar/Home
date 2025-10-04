@@ -81,12 +81,43 @@
   outline: none;
   resize: none;
   transition: 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: #007bff;
   box-shadow: 0 0 4px rgba(0,123,255,0.2);
+}
+
+/* ✅ Checkboxes styling */
+.services-checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.services-checkboxes legend {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.service-option {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #444;
+  cursor: pointer;
+}
+
+.service-option input[type="checkbox"] {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  accent-color: #007bff; /* ✅ modern browsers show blue check */
 }
 
 .contact-form button {
@@ -122,5 +153,3 @@
     flex-direction: column;
   }
 }
-
-

@@ -7,7 +7,7 @@ function About() {
 
   const stats = [
     { title: "Established", value: 2021 },
-    { title: "Trusted Patients", value: 500 },
+    { title: "Trusted Patients", value: 2000 },
     { title: "Google Rating", value: 4.9 },
     { title: "Services", value: 3 },
   ];

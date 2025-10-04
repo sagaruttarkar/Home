@@ -10,6 +10,7 @@
   width: 100%;
   height: 400px;
   overflow: hidden;
+  margin-bottom: 60px; /* ✅ adds global spacing below banner */
 }
 .banner-img {
   width: 100%;

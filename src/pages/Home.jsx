@@ -52,9 +52,9 @@ function Home() {
       {/* Welcome Section */}
       <section className="home-intro">
         <div className="container text-center">
-          <h2 className="fw-bold mb-3">VISMIT RADIOLOGY CENTER</h2>
+          <h2 className="fw-bold mb-3">VISMIT Envision Imagining CENTER</h2>
           <p className="text-muted mb-4">
-            We offer state-of-the-art radiology services including X-ray, MRI, CT Scan, and Ultrasound.
+            We offer state-of-the-art radiology services including X-ray, CT Scan, ECG and Blood Tests.
           </p>
         </div>
       </section>
@@ -78,8 +78,8 @@ function Home() {
             </div>
             <div className="col-md-4">
               <div className="service-card">
-                <h5>✅ Doctor Consultation</h5>
-                <p>Consult our radiology experts from your home.</p>
+                <h5>✅ Blood Test Services</h5>
+                <p>Blood Test At Your door Step .</p>
               </div>
             </div>
           </div>

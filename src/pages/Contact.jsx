@@ -8,17 +8,41 @@ function Contact() {
     name: '',
     email: '',
     mobile: '',
-    service: '',
+    service: [], // <-- now an array to hold multiple services
     message: ''
   });
   const [status, setStatus] = useState('');
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    const { name, value, type, checked } = e.target;
+
+    if (type === 'checkbox' && name === 'service') {
+      setForm((prev) => {
+        const services = prev.service || [];
+        if (checked) {
+          // add service if not already present
+          if (!services.includes(value)) {
+            return { ...prev, service: [...services, value] };
+          }
+          return prev;
+        } else {
+          // remove service
+          return { ...prev, service: services.filter((s) => s !== value) };
+        }
+      });
+    } else {
+      setForm((prev) => ({ ...prev, [name]: value }));
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // validate at least one service selected
+    if (!form.service || form.service.length === 0) {
+      setStatus('❌ Please select at least one service.');
+      return;
+    }
+
     setStatus('Sending...');
 
     try {
@@ -26,12 +50,12 @@ function Contact() {
         name: form.name,
         email: form.email,
         mobile: form.mobile,
-        service: form.service,
+        service: form.service, // array stored in Firestore
         message: form.message,
         timestamp: serverTimestamp(),
       });
       setStatus('✅ Message sent successfully!');
-      setForm({ name: '', email: '', mobile: '', service: '', message: '' });
+      setForm({ name: '', email: '', mobile: '', service: [], message: '' });
     } catch (error) {
       console.error('Error submitting form:', error);
       setStatus('❌ Failed to send message. Please try again.');
@@ -78,14 +102,15 @@ function Contact() {
               required
             />
 
-            <input
+            {/* If you want to re-enable email input, uncomment below */}
+            {/* <input
               type="email"
               name="email"
               placeholder="Your Email"
               value={form.email}
               onChange={handleChange}
               required
-            />
+            /> */}
 
             <input
               type="tel"
@@ -96,18 +121,54 @@ function Contact() {
               required
             />
 
-            <select
-              name="service"
-              value={form.service}
-              onChange={handleChange}
-              required
-            >
-              <option value="">Select Service</option>
-              <option value="Portable X-Ray">Portable X-Ray</option>
-              <option value="Portable ECG">Portable ECG</option>
-              <option value="Portable Blood Test">Portable Blood Test</option>
-              <option value="At-Home X-Ray for Dogs">At-Home X-Ray for Dogs</option>
-            </select>
+            {/* CHECKBOXES FOR SERVICES */}
+            <fieldset className="services-checkboxes" style={{ border: 'none', padding: 0, margin: '12px 0' }}>
+              <legend style={{ fontWeight: 600, marginBottom: 8 }}>Select Service(s) <span style={{ color: '#777', fontWeight: 400 }}>(required)</span></legend>
+
+              <label className="service-option">
+                <input
+                  type="checkbox"
+                  name="service"
+                  value="Portable X-Ray"
+                  checked={form.service.includes('Portable X-Ray')}
+                  onChange={handleChange}
+                />{' '}
+                Portable X-Ray
+              </label>
+
+              <label className="service-option">
+                <input
+                  type="checkbox"
+                  name="service"
+                  value="Portable ECG"
+                  checked={form.service.includes('Portable ECG')}
+                  onChange={handleChange}
+                />{' '}
+                Portable ECG
+              </label>
+
+              <label className="service-option">
+                <input
+                  type="checkbox"
+                  name="service"
+                  value="Portable Blood Test"
+                  checked={form.service.includes('Portable Blood Test')}
+                  onChange={handleChange}
+                />{' '}
+                Portable Blood Test
+              </label>
+
+              <label className="service-option">
+                <input
+                  type="checkbox"
+                  name="service"
+                  value="At-Home X-Ray for Dogs"
+                  checked={form.service.includes('At-Home X-Ray for Dogs')}
+                  onChange={handleChange}
+                />{' '}
+                At-Home X-Ray for Dogs
+              </label>
+            </fieldset>
 
             <textarea
               name="message"
