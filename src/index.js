@@ -8,8 +8,8 @@ import App from "./App.jsx";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <HashRouter basename="/VISMIT">
-      <App />
-    </HashRouter>
+  <BrowserRouter basename="/VISMIT">
+    <App />
+  </BrowserRouter>
   </React.StrictMode>
 );

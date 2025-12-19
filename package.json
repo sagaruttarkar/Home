@@ -2,7 +2,7 @@
   "name": "vismit-radiology",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sagaruttarkar.github.io/VISMIT",
+  "VISMITpage": "https://sagaruttarkar.github.io/VISMIT",
   "dependencies": {
     "@dataconnect/generated": "file:src/dataconnect-generated",
     "@popperjs/core": "^2.11.8",
@@ -43,13 +43,13 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sagaruttarkar/Home.git"
+    "url": "git+https://github.com/sagaruttarkar/VISMIT.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "bugs": {
-    "url": "https://github.com/sagaruttarkar/Home/issues"
+    "url": "https://github.com/sagaruttarkar/VISMIT/issues"
   }
 }
