@@ -7,7 +7,7 @@ function About() {
 
   const stats = [
     { title: "Established", value: 2021 },
-    { title: "Trusted Patients", value: 2000 },
+    { title: "Trusted Patients", value: 5000 },
     { title: "Google Rating", value: 4.9 },
     { title: "Services", value: 3 },
   ];
@@ -24,7 +24,7 @@ function About() {
       <div className="banner">
         <img src={bannerImage} alt="About Us Banner" className="banner-img" />
         <div className="banner-overlay fade-in">
-          <h1>About Vismit Envision Imaging</h1>
+          <h1>ABOUT VISMIT ENVISION IMAGING</h1>
           <p>Making hospital-grade diagnostics accessible at home</p>
         </div>
       </div>
@@ -33,7 +33,7 @@ function About() {
       <div className="about-content container fade-up">
         <h2>Who We Are</h2>
         <p>
-          <b>Vismit Envision Imaging Center</b> brings hospital-grade diagnostics to the comfort of your home. 
+          <b>VISMIT ENVISION IMAGINING CENTER</b> brings hospital-grade diagnostics to the comfort of your home. 
           Founded in 2021 by <b>Mr. Ashwin Vilas Dongre</b>, a certified radiology technician with over 8 years of hands-on experience, 
           Vismit Envision was created to make quality healthcare accessible, convenient, and compassionate.
         </p>

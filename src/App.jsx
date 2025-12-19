@@ -10,15 +10,15 @@ import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 
 function App() {
-  useEffect(() => {
-    // Tawk.to live chat
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = 'https://embed.tawk.to/68da3da2dbcb9a194d15a5e1/1j6a81gq7';
-    script.charset = 'UTF-8';
-    script.setAttribute('crossorigin', '*');
-    document.body.appendChild(script);
-  }, []);
+  // useEffect(() => {
+  //   // Tawk.to live chat
+  //   const script = document.createElement('script');
+  //   script.async = true;
+  //   script.src = 'https://embed.tawk.to/68da3da2dbcb9a194d15a5e1/1j6a81gq7';
+  //   script.charset = 'UTF-8';
+  //   script.setAttribute('crossorigin', '*');
+  //   document.body.appendChild(script);
+  // }, []);
 
   return (
     <div className="App">

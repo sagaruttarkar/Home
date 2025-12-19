@@ -2,7 +2,7 @@
   "name": "vismit-radiology",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://sagaruttarkar.github.io/Home",
   "dependencies": {
     "@dataconnect/generated": "file:src/dataconnect-generated",
     "@popperjs/core": "^2.11.8",
@@ -38,5 +38,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagaruttarkar/Home.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/sagaruttarkar/Home/issues"
   }
 }

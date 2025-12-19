@@ -31,7 +31,7 @@ function Header() {
       <div className="header-container">
         {/* Logo */}
         <h1 className="logo">
-          <Link to="/">VISMIT Envision Imagining Center</Link>
+          <Link to="/">VISMIT ENVISION IMAGINING CENTER</Link>
         </h1>
 
         {/* Navigation */}
