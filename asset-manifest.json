@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Home/static/css/main.64e9888f.css",
-    "main.js": "/Home/static/js/main.3068e4e5.js",
-    "index.html": "/Home/index.html",
-    "main.64e9888f.css.map": "/Home/static/css/main.64e9888f.css.map",
-    "main.3068e4e5.js.map": "/Home/static/js/main.3068e4e5.js.map"
+    "main.css": "/VISMIT/static/css/main.64e9888f.css",
+    "main.js": "/VISMIT/static/js/main.04596955.js",
+    "index.html": "/VISMIT/index.html",
+    "main.64e9888f.css.map": "/VISMIT/static/css/main.64e9888f.css.map",
+    "main.04596955.js.map": "/VISMIT/static/js/main.04596955.js.map"
   },
   "entrypoints": [
     "static/css/main.64e9888f.css",
-    "static/js/main.3068e4e5.js"
+    "static/js/main.04596955.js"
   ]
 }
